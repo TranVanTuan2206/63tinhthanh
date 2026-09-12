@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò chơi: Kể tên 63 Tỉnh Thành Việt Nam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Kể tên 63 Tỉnh Thành</h1>
+    
+    <div class="controls">
+        <div class="stats">
+            Đã tìm thấy: <span id="guessed-count" style="color: #4CAF50;">0</span> / 63 
+            (Còn lại: <span id="remaining-count">63</span>)
+        </div>
+        <input type="text" id="province-input">
+        <button id="show-answer-btn">Hiển thị đáp án</button>
+        <button id="reset-btn" type="button">Reset</button>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite">Đáp án sai</div>
+
+    <div class="grid-container" id="cards-container"></div>
+
+    <script src="scr.js"></script>
+</body>
+</html>

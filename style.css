@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  color: #333;
+}
+.controls {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.stats {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #555;
+}
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+input:focus {
+  border-color: #4caf50;
+}
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+button:hover {
+  background-color: #d32f2f;
+}
+#reset-btn {
+  background-color: #607d8b;
+}
+#reset-btn:hover {
+  background-color: #455a64;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 1280px;
+}
+.card {
+  background-color: #e0e0e0;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  color: transparent; /* Ẩn chữ ban đầu */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Style cho đáp án đúng */
+.card.correct {
+  background-color: #4caf50;
+  color: white;
+}
+.card.flash-red {
+  background-color: #f44336 !important;
+  color: white !important;
+}
+/* Style cho đáp án bỏ lỡ (show answer) */
+.card.missed {
+  background-color: #f44336;
+  color: white;
+}
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(244, 67, 54, 0.95);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
